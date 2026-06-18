@@ -2,7 +2,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "https://multishop-backend-0ifz.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_URL ,
   withCredentials: true,
   headers: { "Content-Type": "application/json" },
 });
