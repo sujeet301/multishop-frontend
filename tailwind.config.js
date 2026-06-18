@@ -1,0 +1,78 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#f0f4ff",
+          100: "#e0e9ff",
+          200: "#c7d7fe",
+          300: "#a5b9fc",
+          400: "#8090f8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+        },
+        accent: {
+          400: "#fb923c",
+          500: "#f97316",
+          600: "#ea580c",
+        },
+        surface: {
+          light: "#ffffff",
+          dark: "#0f0f14",
+          card: "#f8f9ff",
+          "card-dark": "#1a1a2e",
+        },
+      },
+      fontFamily: {
+        display: ["'Plus Jakarta Sans'", "sans-serif"],
+        body: ["'DM Sans'", "sans-serif"],
+        mono: ["'JetBrains Mono'", "monospace"],
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s ease-out",
+        "slide-up": "slideUp 0.4s ease-out",
+        "slide-down": "slideDown 0.3s ease-out",
+        "scale-in": "scaleIn 0.3s ease-out",
+        shimmer: "shimmer 1.5s infinite",
+        float: "float 3s ease-in-out infinite",
+        "spin-slow": "spin 3s linear infinite",
+        wiggle: "wiggle 0.3s ease-in-out",
+        "bounce-in": "bounceIn 0.5s cubic-bezier(0.68,-0.55,0.27,1.55)",
+        "heart-pop": "heartPop 0.3s cubic-bezier(0.68,-0.55,0.27,1.55)",
+        "cart-fly": "cartFly 0.6s ease-in-out",
+      },
+      keyframes: {
+        fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+        slideUp: { from: { opacity: 0, transform: "translateY(20px)" }, to: { opacity: 1, transform: "translateY(0)" } },
+        slideDown: { from: { opacity: 0, transform: "translateY(-10px)" }, to: { opacity: 1, transform: "translateY(0)" } },
+        scaleIn: { from: { opacity: 0, transform: "scale(0.9)" }, to: { opacity: 1, transform: "scale(1)" } },
+        shimmer: { "0%": { backgroundPosition: "-200% 0" }, "100%": { backgroundPosition: "200% 0" } },
+        float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-8px)" } },
+        wiggle: { "0%,100%": { transform: "rotate(0deg)" }, "25%": { transform: "rotate(-5deg)" }, "75%": { transform: "rotate(5deg)" } },
+        bounceIn: { "0%": { transform: "scale(0)" }, "80%": { transform: "scale(1.1)" }, "100%": { transform: "scale(1)" } },
+        heartPop: { "0%": { transform: "scale(1)" }, "50%": { transform: "scale(1.4)" }, "100%": { transform: "scale(1)" } },
+        cartFly: { "0%": { transform: "scale(1) translateY(0)" }, "50%": { transform: "scale(0.8) translateY(-20px)" }, "100%": { transform: "scale(1) translateY(0)" } },
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "mesh-gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        shimmer: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)",
+      },
+      backdropBlur: { xs: "2px" },
+      boxShadow: {
+        glow: "0 0 20px rgba(99,102,241,0.4)",
+        "glow-accent": "0 0 20px rgba(249,115,22,0.4)",
+        glass: "0 8px 32px rgba(0,0,0,0.1)",
+        card: "0 4px 24px rgba(0,0,0,0.08)",
+        "card-hover": "0 12px 40px rgba(0,0,0,0.15)",
+      },
+    },
+  },
+  plugins: [],
+};
